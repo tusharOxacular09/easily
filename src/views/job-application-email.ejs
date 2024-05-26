@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Application Success</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .container {
+        margin-top: 50px;
+      }
+      .card {
+        margin: 20px auto;
+        max-width: 600px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="card-header bg-success text-white">
+          <h4>Job Application Successful</h4>
+        </div>
+        <div class="card-body">
+          <p>Dear <%= applicantName %>,</p>
+          <p>
+            Thank you for applying for the
+            <strong><%= jobTitle %></strong> position at
+            <strong><%= companyName %></strong>.
+          </p>
+          <p>
+            We have received your application and our team is currently
+            reviewing it. We will get back to you soon.
+          </p>
+          <p>Best Regards,</p>
+          <p><strong><%= companyName %> Recruitment Team</strong></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

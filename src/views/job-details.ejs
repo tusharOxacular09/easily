@@ -1,0 +1,29 @@
+<div class="job-banner" id="jobBanner">
+  <div class="container">
+    <h1 class="mb-4">Join Us at <%= job.companyName %>!</h1>
+    <p class="lead">
+      We're looking for a passionate <%= job.designation %> to join our team in
+      <%= job.location %>.
+    </p>
+    <ul class="list-unstyled">
+      <li><strong>Category:</strong> <%= job.category %></li>
+      <li>
+        <strong>Salary Range:</strong> ₹<%= job.minSalary %> - ₹<%=
+        job.maxSalary %> per annum
+      </li>
+      <li><strong>Apply By:</strong> <%= job.applyBy %></li>
+      <li><strong>Number of Openings:</strong> <%= job.numberOfOpenings %></li>
+      <li><strong>Job Posted:</strong> <%= job.jobPosted %></li>
+      <li>
+        <strong>Skills Required:</strong>
+        <div class="skills-list" id="skillsList">
+          <% job.skills.forEach(skill => { %>
+          <span class="skill-item"><%= skill %></span>
+          <% }); %>
+        </div>
+      </li>
+      <li><strong>Total Applicants:</strong> <%= job.applicants.length %></li>
+    </ul>
+    <a href="/apply/<%= job.id %>" class="btn btn-primary">Apply Now</a>
+  </div>
+</div>

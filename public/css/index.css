@@ -1,0 +1,206 @@
+.landing-page-container {
+  height: 100vh;
+  overflow: hidden;
+  background-color: #edf2f4;
+  color: black;
+}
+
+.left-side {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading {
+  padding: 0px 60px;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+#btn-custom {
+  padding: 8px 20px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.right-side {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-fluid {
+  width: 600px;
+}
+
+@media (max-width: 1300px) {
+  .heading {
+    padding: 0px 10px;
+  }
+}
+
+.form-container {
+  margin-top: 80px;
+}
+
+.form-group {
+  margin-top: 10px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.note-point {
+  font-size: 13px;
+  color: rgb(155, 155, 4);
+  font-weight: 500;
+}
+
+.job-card {
+  box-shadow: 0 4px 8px rgba(0, 0, 255, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.job-card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 8px 16px rgba(0, 0, 255, 0.4);
+}
+
+.card-header,
+.card-body {
+  font-size: 0.9rem;
+}
+
+.skill-box {
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  padding: 3px 6px;
+  margin: 2px;
+  display: inline-block;
+  font-size: 0.8rem;
+}
+
+.card-text {
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 576px) {
+  .job-card {
+    margin-bottom: 1rem;
+  }
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.job-banner {
+  background-color: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 50px 20px;
+  margin: 80px 20px;
+  border-radius: 20px;
+  text-align: start;
+  transition: box-shadow 0.2s;
+}
+.job-banner:hover {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+.skills-list {
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+}
+.skill-item {
+  background-color: #f1f1f1;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: 5px;
+}
+
+.redirect-auth {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+}
+
+.my-container {
+  margin-top: 80px;
+  padding: 0px 10px;
+}
+.my-card {
+  margin: 20px auto;
+  max-width: 600px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.my-card-header {
+  background-color: #007bff;
+  color: white;
+  padding: 15px;
+  border-bottom: 1px solid #dee2e6;
+}
+.my-card-body {
+  padding: 15px;
+}
+.my-resume-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 10px 0;
+}
+.my-card p {
+  margin: 5px 0;
+}
+.my-card .btn {
+  background-color: #007bff;
+  color: white;
+  margin-top: 10px;
+}
+
+.custom-job-card {
+  max-height: 200px;
+  width: 100%;
+  margin-bottom: 20px;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.custom-job-card .custom-card-body {
+  padding: 10px;
+}
+.custom-job-card .delete-button {
+  float: right;
+  margin-top: -5px;
+}
+.custom-job-card .card-text-inline {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.custom-job-card .card-text-inline p {
+  flex: 1;
+  margin-right: 10px;
+}
+.custom-job-card .card-text-inline p:last-child {
+  margin-right: 0;
+}

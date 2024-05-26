@@ -1,0 +1,32 @@
+<div class="container my-container">
+  <% if (applications.length === 0) { %>
+  <div class="col-12">
+    <h1 class="text-center">No applications submitted yet 😔</h1>
+  </div>
+  <% } else { %>
+  <h2 class="text-center">User Applications</h2>
+  <% applications.forEach(application => { %>
+  <div class="card my-card">
+    <div class="card-header my-card-header">
+      <h4><%= application.name %></h4>
+    </div>
+    <div class="card-body my-card-body">
+      <p><strong>Email:</strong> <%= application.email %></p>
+      <p><strong>Contact:</strong> <%= application.phone %></p>
+      <p><strong>Application ID:</strong> <%= application.applicationId %></p>
+      <% if (application.resumePath) { %>
+      <div>
+        <img
+          src="<%= application.resumePath %>"
+          alt="Resume Image"
+          class="my-resume-img"
+        />
+      </div>
+      <% } %>
+      <a href="<%= application.resumePath %>" class="btn btn-primary" download
+        >Download Resume</a
+      >
+    </div>
+  </div>
+  <% }) %> <% } %>
+</div>

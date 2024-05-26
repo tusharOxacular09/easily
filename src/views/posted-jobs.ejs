@@ -1,0 +1,58 @@
+<div class="container form-container">
+  <div class="row">
+    <% if (jobs.length===0) { %>
+    <div class="col-12">
+      <h1 class="text-center">No jobs posted yet 😔</h1>
+    </div>
+    <% } else { %> <% jobs.forEach(job=> { %>
+    <div class="col-12">
+      <div class="custom-job-card card">
+        <div class="custom-card-body card-body">
+          <a
+            href="/delete/<%= job.id %>"
+            class="m-2 btn btn-danger delete-button"
+            >Delete</a
+          >
+          <a
+            href="/view/<%= job.id %>"
+            class="m-2 btn btn-success delete-button"
+            >View Applications</a
+          >
+
+          <h5 class="card-title">
+            <%= job.companyName %> - <%= job.designation %>
+          </h5>
+          <div class="card-text-inline">
+            <p class="card-text">
+              <strong>Location:</strong>
+              <%= job.location %>
+            </p>
+            <p class="card-text">
+              <strong>Salary:</strong> ₹<%= job.minSalary %> - ₹<%=
+              job.maxSalary %> per annum
+            </p>
+          </div>
+          <p class="card-text">
+            <strong>Skills:</strong>
+            <%= job.skills.join(", ") %>
+          </p>
+          <p class="card-text">
+            <strong>Number of Openings:</strong>
+            <%= job.numberOfOpenings %>
+          </p>
+          <div class="card-text-inline">
+            <p class="card-text">
+              <strong>Apply By:</strong>
+              <%= job.applyBy %>
+            </p>
+            <p class="card-text">
+              <strong>Total number of applicants:</strong>
+              <%= job.applicants.length %>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% }) %> <% } %>
+  </div>
+</div>

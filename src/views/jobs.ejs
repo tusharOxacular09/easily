@@ -1,0 +1,42 @@
+<div class="container form-container">
+  <h1 class="mb-4">Job Listings</h1>
+  <div class="row">
+    <% jobs.forEach(job => { %>
+    <div class="col-md-4 mb-4">
+      <div class="card job-card">
+        <div class="card-header"><%= job.designation %></div>
+        <div class="card-body">
+          <h5 class="card-title"><%= job.category %></h5>
+          <p class="card-text">
+            <strong>Location:</strong> <%= job.location %>
+          </p>
+          <p class="card-text">
+            <strong>Company:</strong> <%= job.companyName %>
+          </p>
+          <p class="card-text">
+            <strong>Salary:</strong> ₹<%= job.minSalary %> - ₹<%= job.maxSalary
+            %>
+          </p>
+          <p class="card-text"><strong>Apply By:</strong> <%= job.applyBy %></p>
+          <p class="card-text">
+            <strong>Number of Openings:</strong> <%= job.numberOfOpenings %>
+          </p>
+          <p class="card-text">
+            <strong>Job Posted:</strong> <%= job.jobPosted %>
+          </p>
+          <p class="card-text"><strong>Skills:</strong></p>
+          <div>
+            <% job.skills.forEach(skill => { %>
+            <div class="skill-box"><%= skill %></div>
+            <% }); %>
+          </div>
+          <p><strong>Total Applicants:</strong> <%= job.applicants.length %></p>
+          <a href="/jobdetails/<%= job.id %>" class="btn btn-primary mt-3"
+            >View Job Details</a
+          >
+        </div>
+      </div>
+    </div>
+    <% }); %>
+  </div>
+</div>

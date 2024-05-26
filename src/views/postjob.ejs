@@ -1,0 +1,136 @@
+<div class="container mb-5 form-container">
+  <% if (errorMessage) { %>
+  <div class="alert alert-danger" role="alert"><%= errorMessage %></div>
+  <% } %> <% if (successMessage) { %>
+  <div class="alert alert-success" role="alert"><%= successMessage %></div>
+  <% } %>
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title text-center">Post a New Job</h5>
+          <form action="/post-job" method="post">
+            <div class="form-group">
+              <label for="jobCategory">Job Category</label>
+              <select class="form-control" id="jobCategory" name="jobCategory">
+                <option value="tech">Tech</option>
+                <option value="non-tech">Non-Tech</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="jobDesignation">Job Designation</label>
+              <select
+                class="form-control"
+                id="jobDesignation"
+                name="jobDesignation"
+              >
+                <option value="HR">HR</option>
+                <option value="SDE 1">SDE 1</option>
+                <option value="SDE 2">SDE 2</option>
+                <option value="MERN Developer">MERN Developer</option>
+                <option value="Java Developer">Java Developer</option>
+                <option value="Full Stack Developer">
+                  Full Stack Developer
+                </option>
+                <option value="Frontend Developer">Frontend Developer</option>
+                <option value="Backend Developer">Backend Developer</option>
+                <option value="UI Designer">UI Designer</option>
+                <option value="Digital Marketing">Digital Marketing</option>
+                <option value="Sales Executive">Sales Executive</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="jobLocation">Job Location</label>
+              <input
+                type="text"
+                class="form-control"
+                id="jobLocation"
+                name="jobLocation"
+                placeholder="Enter job location"
+              />
+            </div>
+            <div class="form-group">
+              <label for="companyName">Company Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="companyName"
+                name="companyName"
+                placeholder="Enter company name"
+              />
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="salaryMin">Salary Min</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="salaryMin"
+                  name="salaryMin"
+                  placeholder="Min salary"
+                />
+              </div>
+              <div class="form-group col-md-6">
+                <label for="salaryMax">Salary Max</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="salaryMax"
+                  name="salaryMax"
+                  placeholder="Max salary"
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="applyBy">Apply By</label>
+              <input
+                type="date"
+                class="form-control"
+                id="applyBy"
+                name="applyBy"
+              />
+            </div>
+            <div class="form-group">
+              <label for="skillsRequired"
+                >Skills Required
+                <span class="note-point"
+                  >Add skills, separated by commas.</span
+                ></label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="skillsRequired"
+                name="skillsRequired"
+                placeholder="Enter skills required"
+              />
+            </div>
+            <div class="form-group">
+              <label for="numberOfPostings">Number of Postings</label>
+              <input
+                type="number"
+                class="form-control"
+                id="numberOfPostings"
+                name="numberOfPostings"
+                placeholder="Enter number of postings"
+                min="0"
+              />
+            </div>
+            <div class="form-group">
+              <label for="jobPostedDate">Job Posted Date</label>
+              <input
+                type="date"
+                class="form-control"
+                id="jobPostedDate"
+                name="jobPostedDate"
+              />
+            </div>
+            <button type="submit" class="btn btn-primary btn-block form-group">
+              Post Job
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
